@@ -1,12 +1,15 @@
 import { Formik } from "formik";
+import Cookies from 'js-cookie'
 import React from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { LoginSchema } from '../../utils/Validation'
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/lib/auth";
 const LoginForm = () => {
   const Navigate = useNavigate();
-
+  const dispatch = useDispatch()
   return (
     <>
       <div className="py-4 h-100 d-flex flex-column  justify-content-center align-items-center">
@@ -19,8 +22,12 @@ const LoginForm = () => {
           validationSchema={LoginSchema}
           onSubmit={({ mobile, password }) => {
             if (mobile === '01120223494' && password === '123456') {
+              Cookies.set('user', JSON.stringify({ mobile: '01120223494', name: 'Ahmed Gabr' }), { expires: 7 })
+
+                dispatch(login({mobile: '01120223494', name:'Ahmed Gabr'}))
               toast.success('Welcome to Tqneen')
               Navigate('/')
+
             } else {
               toast.error('Mobile number or password is not valid')
             }

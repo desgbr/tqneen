@@ -49,6 +49,7 @@
     justify-content: center;
     gap: 10px;
     cursor: pointer;
+    position: relative;
     img{
       width: 36px;
       height: 36px;
@@ -58,6 +59,17 @@
       -ms-border-radius: 18px;
       -o-border-radius: 18px;
       border: 2px solid $blue;
+}
+.menu{
+  background-color: rgb(214, 219, 223);
+  position: absolute;
+  bottom: -70px;
+  right: 0;
+  width: 150px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgab(0,0,0,0.1);
+  
 }
   }
 }

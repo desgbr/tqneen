@@ -59,14 +59,14 @@ export const dashboardData = {
       color:'yellow'
     },
     {
-      id:0,
+      id:2,
       count:190,
       title:'Sales Products',
       icon: <HiShoppingBag />,
       color:'orange'
     },
     {
-      id:0,
+      id:3,
       count:12,
       title:'Job Application',
       icon: <BiBriefcase />,
