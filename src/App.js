@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import {BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Layout from './layout/index'
 import Login from './pages/auth/Login'
 import PrivateRoutes from './utils/PrivateRoutes'
