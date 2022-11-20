@@ -100,7 +100,7 @@ const LoginForm = () => {
                   }
                 </Form.Group>
                 <Col md='8' className="text-center">
-                  <Button type="submit" >Submit form</Button>
+                  <Button type="submit" >Log in</Button>
                 </Col>
               </Row>
 
