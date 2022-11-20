@@ -1,9 +1,12 @@
 import { MdOutlineSpaceDashboard }from 'react-icons/md'
-import { BiUserPin, BiBriefcase } from 'react-icons/bi'
-import { FiUsers } from 'react-icons/fi'
+import { BiBell, BiBriefcase, BiMessageDetail } from 'react-icons/bi'
+import { AiOutlineBarChart } from 'react-icons/ai'
 import { FaHeart } from 'react-icons/fa'
 import { RiGamepadLine } from 'react-icons/ri'
 import { HiShoppingBag } from 'react-icons/hi'
+import { HiOutlineCog8Tooth } from 'react-icons/hi2'
+import { TbFileInvoice } from 'react-icons/tb'
+import { BsCalendar2Check, BsCalendarDate } from 'react-icons/bs'
 
 
 export const sidebarLinks = [
@@ -15,27 +18,45 @@ export const sidebarLinks = [
   },
   {
     id:2,
-    name:'Lawyers',
-    path:'/lawyers',
-    icon: <BiUserPin />
+    name:'Analytics',
+    path:'/analytics',
+    icon: <AiOutlineBarChart />
   },
   {
     id:3,
-    name:'Clients',
-    path:'/clients',
-    icon: <FiUsers/>
+    name:'Invoice',
+    path:'/invoice',
+    icon: <TbFileInvoice />
   },
   {
     id:4,
-    name:'Cases',
-    path:'/cases',
-    icon: <BiBriefcase />
+    name:'Schedule',
+    path:'/schedule',
+    icon: <BsCalendarDate />
   },
   {
     id:5,
-    name:'404',
+    name:'Calender',
+    path:'/calender',
+    icon: <BsCalendar2Check />
+  },
+  {
+    id:6,
+    name:'Messages',
+    path:'/messages',
+    icon: <BiMessageDetail/>
+  },
+  {
+    id:7,
+    name:'Notifcation',
+    path:'/notifcation',
+    icon: <BiBell />
+  },
+  {
+    id:8,
+    name:'Settings',
     path:'/settings',
-    icon: <MdOutlineSpaceDashboard/>
+    icon: <HiOutlineCog8Tooth />
   },
 
 ]
@@ -74,3 +95,45 @@ export const dashboardData = {
     },
   ]
 }
+
+
+// products table on dashboard
+
+export const ProductsColumnsDB = [
+  {
+    name: 'Tracking no',
+    selector: row => row?.id,
+    sortable: true,
+    reorder: true,
+    center: true,
+    maxWidth: '120px',
+  },
+  {
+    name: 'Product name',
+    selector: row => row?.title,
+    sortable: true,
+    reorder: true,
+    center: true,
+  },
+  {
+    name: 'Price',
+    selector: row => row?.price + 'LE',
+    sortable: true,
+    reorder: true,
+    center: true,
+  },
+  {
+    name: 'Total Order',
+    selector: row => row?.quantity,
+    sortable: true,
+    reorder: true,
+    center: true,
+  },
+  {
+    name: 'Total Amount',
+    selector: row => row?.total ,
+    sortable: true,
+    reorder: true,
+    center: true,
+  }
+]

@@ -15,14 +15,6 @@ const Login = () => {
             <LoginForm />
           </Col>
       <Col md={6} className="p-0 image">
-            <div className=" d-flex align-items-center justify-content-center h-100">
-              <img
-                data-aos="zoom-in"
-                src="Lawyer-bro 2.png"
-                className="w-50"
-                alt='Tqneen'
-              />
-            </div>
           </Col>
         </Row>
 

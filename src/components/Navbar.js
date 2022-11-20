@@ -10,7 +10,7 @@ const Navbar = ({toggle, show}) => {
   const dispatch = useDispatch()
   const handleLogOut = () =>{
     Cookies.remove('user')
-    dispatch(logOut())
+    dispatch(logOut({isAuth:false, user: null}))
   }
   return (
     <div className='nav-bar'>

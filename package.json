@@ -17,6 +17,7 @@
     "react-apexcharts": "^1.4.0",
     "react-bootstrap": "^2.6.0",
     "react-countup": "^6.3.2",
+    "react-data-table-component": "^7.5.3",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
     "react-redux": "^8.0.5",

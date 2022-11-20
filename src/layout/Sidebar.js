@@ -12,7 +12,7 @@ const Sidebar = ({toggle,show}) => {
         <MdClose/>
       </div>
       <div className="logo">
-        <img src="https://tqneeen.vercel.app/images/tqneen-logo.png" alt="" />
+        <img src="logo.png" alt="" />
       </div>
       <div className="menu">
           {
