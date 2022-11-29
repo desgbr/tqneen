@@ -1,12 +1,13 @@
 import { MdOutlineSpaceDashboard }from 'react-icons/md'
 import { BiBell, BiBriefcase, BiMessageDetail } from 'react-icons/bi'
 import { AiOutlineBarChart } from 'react-icons/ai'
-import { FaHeart } from 'react-icons/fa'
+import { FaEye, FaHeart } from 'react-icons/fa'
 import { RiGamepadLine } from 'react-icons/ri'
 import { HiShoppingBag } from 'react-icons/hi'
 import { HiOutlineCog8Tooth } from 'react-icons/hi2'
 import { TbFileInvoice } from 'react-icons/tb'
 import { BsCalendar2Check, BsCalendarDate } from 'react-icons/bs'
+import { Button } from 'react-bootstrap'
 
 
 export const sidebarLinks = [
@@ -134,6 +135,48 @@ export const ProductsColumnsDB = [
     selector: row => row?.total ,
     sortable: true,
     reorder: true,
+    center: true,
+  }
+]
+
+
+// Analytics table on dashboard
+
+export const AnalyticsColumnsDB = [
+  {
+    name: 'Name',
+    selector: row => <div className='user-table-row'>
+      <img src={row.picture.thumbnail} alt={row.name.first} />
+      <span>{`${row.name.first} ${row.name.last}`}</span>
+    </div>,
+    sortable: true,
+    reorder: true,
+    center: false,
+  },
+  {
+    name: 'Email',
+    selector: row => row?.email,
+    sortable: true,
+    reorder: true,
+    center: true,
+  },
+  {
+    name: 'Mobile',
+    selector: row => row?.phone,
+    sortable: true,
+    reorder: true,
+    center: true,
+  },
+  {
+    name: 'Gender',
+    selector: row => <div className={`gender ${row?.gender === 'male' ? 'male': 'female'}`}>{row?.gender}</div>,
+    sortable: true,
+    reorder: true,
+    center: true,
+  },
+  {
+    name: 'Action',
+    selector: row => <Button onClick={()=> console.log(row)} className='btn-info btn-sm'>view <FaEye/> </Button>,
     center: true,
   }
 ]

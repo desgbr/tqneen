@@ -11,7 +11,7 @@ const Dashboard = () => {
   const dispatch = useDispatch()
   useEffect(()=>{
     dispatch(fetchProducts())
-  },[])
+  }, [dispatch])
 
   const products = useSelector(state => state?.products?.products[0]?.products)
   console.log(products);
